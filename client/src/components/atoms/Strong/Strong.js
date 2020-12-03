@@ -5,7 +5,7 @@ export const Strong = styled.strong`
     color: ${ ({color}) => color || '#222'};
     font-size: 20px;
     line-height: 29px;
-    font-weight: 500;
+    font-weight: ${ ({ theme }) => theme.fontWeight.weight500};
     text-transform: ${ ({footer}) => footer ? 'uppercase' : 'none'};
 
     /* Jeśli mamy x >= 2 warunkowe to lepiej dać w css  */
@@ -13,7 +13,7 @@ export const Strong = styled.strong`
         large && css`
             font-size: 25px;
             line-height: 40px;
-            font-weight: 600;
+            font-weight: ${ ({ theme }) => theme.fontWeight.weight600};
         `
     }
 `

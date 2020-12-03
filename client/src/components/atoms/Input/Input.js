@@ -4,7 +4,7 @@ export const Input = styled.input`
     width: ${ ({width}) => width || '50%'};
     height: 30px;
     padding: 15px 20px;
-    font-weight: 200;
+    font-weight: ${ ({ theme }) => theme.fontWeight.weight200};
     /* Że ma brać color z thema */
     border: ${ ({theme}) => theme.border};
     border-radius: 4px;

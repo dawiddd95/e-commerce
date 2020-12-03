@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
 	height: 40px;
-	padding: 0 10px;
+	padding: 0 15px;
 	/* Nie możemy użyć zapisu theme, ponieważ da to kolor primary na wszystkich buttonach w zależności od themu jakiego używamy, czy light czy dark */
 	/* Kolor primary themu light lub dark */
 	/* background-color: { dolar({theme}) => theme.primary}; */
@@ -12,12 +12,18 @@ export const Button = styled.button`
 	color: ${ ({color, theme}) => color || theme.color.primary};
 	font-weight: 400;
 	text-transform: ${ ({uppercase}) => uppercase ? 'uppercase' : 'none'};
-	text-align: left;
 	border: ${ ({border, theme}) => border ? theme.border : '0'};
 	/* Bo może być sam button z ikonki i jako koło */
 	border-radius: ${ ({borderRadius}) => borderRadius || '4px'};
 	outline: 0;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	:hover {
+		border: ${ ({hover, theme}) => hover ? `2px solid ${theme.background.primary}` : 'none'};
+	}
 
 	/* Pamiętaj, że jeśli będziemy przekazywali za dużo propsów styli do komponentu to lepiej to wyodrębnić jako && css */
 `
