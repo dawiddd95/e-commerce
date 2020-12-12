@@ -5,7 +5,7 @@ export const fetchData = async (api, dataSetter, errorSetter = null) => {
         errorSetter(false);
         const { data } = await axios.get(api);
 
-        dataSetter(data.total);
+        dataSetter(data);
     } 
     catch (err) {
         errorSetter(true);

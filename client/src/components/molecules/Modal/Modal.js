@@ -5,8 +5,9 @@ import { ButtonIcon } from 'components/atoms/ButtonIcon/ButtonIcon';
 import closeIcon from 'assets/icons/close.svg';
 import * as S from './StyledModal';
 
-const Modal = ({header, paragraph, onClickCloseModal}) => {
+const Modal = ({header, paragraph, onClickCloseModal, children}) => {
     return (
+        // Regularny kod
         <S.Wrapper>
             <S.HeaderWrapper>
                 <Strong>{header}</Strong>
@@ -15,6 +16,9 @@ const Modal = ({header, paragraph, onClickCloseModal}) => {
             <S.StyledParagraph>
                 {paragraph}
             </S.StyledParagraph>
+
+            {/* Dodatkowy nieregularny children jeśli jeszcze coś chcemy dodać do modalu */}
+            {children}
         </S.Wrapper>
     );
 }
@@ -22,7 +26,12 @@ const Modal = ({header, paragraph, onClickCloseModal}) => {
 Modal.propTypes = {
     header: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
-    onClickCloseModal: PropTypes.func.isRequired
+    onClickCloseModal: PropTypes.func.isRequired,
+    children: PropTypes.node
+}
+
+Modal.defaultProps = {
+    children: undefined
 }
  
 export default Modal;

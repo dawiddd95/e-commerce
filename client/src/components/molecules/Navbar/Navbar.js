@@ -7,6 +7,7 @@ const Navbar = () => {
         <S.Wrapper>
             <S.LinksWrapper>
                 <S.NavbarStyledLink 
+                    to='/'
                     fontWeight={theme.fontWeight.weight600}
                     navbar
                 >
@@ -18,7 +19,8 @@ const Navbar = () => {
                 >
                     PRODUCTS
                 </S.NavbarStyledLink>
-                <S.NavbarStyledLink 
+                <S.NavbarStyledLink
+                    to='/contact-us' 
                     fontWeight={theme.fontWeight.weight600}
                     navbar
                 >

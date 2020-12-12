@@ -31,11 +31,11 @@ const AccountMenu = () => {
                             <S.DropdownStyledLink textHover>
                                 My Wish List
                             </S.DropdownStyledLink>
-                            <S.DropdownStyledLink textHover>
+                            <S.DropdownStyledLink to='/register' textHover>
                                 Create an Account
                             </S.DropdownStyledLink>
-                            <S.DropdownStyledLink textHover>
-                                Sign In
+                            <S.DropdownStyledLink to='/login' textHover>
+                                Log In
                             </S.DropdownStyledLink>
                         </S.DropdownWrapper>
                     )
